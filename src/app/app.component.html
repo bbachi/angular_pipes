@@ -1,0 +1,66 @@
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1>Angular Pipes Testing {{number}}</h1>
+    <div class="btn-group mrgtop" dropdown>
+      <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+              aria-controls="dropdown-basic">
+        Select pipes to test <span class="caret"></span>
+      </button>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a (click)="showPipes('BI')" class="dropdown-item" href="#">Built-in Pipes</a></li>
+        <li role="menuitem"><a (click)="showPipes('CI')" class="dropdown-item" href="#">Custom Pipes</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+    <div *ngIf="pipeType == 'BI'">
+      <tabset>
+        <tab heading="LowerCasePipe" customClass="bgclor" id="tab1">
+          <app-lowercase-pipe></app-lowercase-pipe>
+        </tab>
+        <tab heading="UpperCasePipe" customClass="bgclor">
+            <app-uppercase-pipe></app-uppercase-pipe>
+        </tab>
+        <tab heading="TitleCasePipe" customClass="bgclor">
+            <app-titlecase-pipe></app-titlecase-pipe>
+        </tab>
+        <tab heading="DecimalPipe" customClass="bgclor">
+            <app-decimal-pipe></app-decimal-pipe>
+        </tab>
+        <tab heading="CurrencyPipe" customClass="bgclor">
+            <app-currency-pipe></app-currency-pipe>
+        </tab>
+        <tab heading="JsonPipe" customClass="bgclor">
+            <app-json-pipe></app-json-pipe>
+        </tab>
+        <tab heading="PercentPipe" customClass="bgclor">
+            <app-percent-pipe></app-percent-pipe>
+        </tab>
+        <tab heading="DatePipe" customClass="bgclor">
+            <app-date-pipe></app-date-pipe>
+        </tab>
+        <tab heading="KeyValuePipe" customClass="bgclor">
+            <app-keyvalue-pipe></app-keyvalue-pipe>
+        </tab>
+        <tab heading="SlicePipe" customClass="bgclor">
+            <app-slice-pipe></app-slice-pipe>
+        </tab>
+        <tab heading="AsyncPipe" customClass="bgclor">
+            <app-async-pipe></app-async-pipe>
+        </tab>
+      </tabset>
+    </div>
+    <div *ngIf="pipeType == 'CI'">
+        <tabset>
+          <tab heading="MyNamePipe" customClass="bgclorc" id="tab1">
+            <app-myname-pipe></app-myname-pipe>
+          </tab>
+          <tab heading="Impure example" customClass="bgclorc">
+              <app-printout-pipe></app-printout-pipe>
+          </tab>
+        </tabset>
+    </div>
+</div>

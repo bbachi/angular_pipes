@@ -1,0 +1,17 @@
+<div class="form-group">
+  <label for="usr">Decimal Pipe Test:</label>
+  <input type="number" [(ngModel)]="myNumber" class="form-control" id="usr">
+</div>
+
+<div class="mrg10">
+  <h1>Result with no format:</h1>
+  <p>{{myNumber | percent}}</p>
+</div>
+<div class="mrg10">
+  <h1>Result with format (2.1-2):</h1>
+  <p>{{myNumber | percent:'2.1-2'}}</p>
+</div>
+<div class="mrg10">
+  <h1>Result with format (2.1-2) and locale en:</h1>
+  <p>{{myNumber | percent:'2.1-2':'en'}}</p>
+</div>

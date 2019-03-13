@@ -1,0 +1,22 @@
+<div class="form-group">
+  <label for="usr">Currency Pipe Test:</label>
+  <input type="number" [(ngModel)]="myNumber" class="form-control" id="usr">
+</div>
+
+<div class="mrg10">
+  <h1>Result with no format:</h1>
+  <p>{{myNumber | currency}}</p>
+</div>
+<div class="mrg10">
+  <h1>Result with code (CAD):</h1>
+  <p>{{myNumber | currency:'CAD'}}</p>
+</div>
+<div class="mrg10">
+  <h1>Result with digits info (4.2-2):</h1>
+  <p>{{myNumber | currency:'CAD':'symbol':'4.2-2'}}</p>
+</div>
+<div class="mrg10">
+  <h1>Result with format (4.2-2) and locale en:</h1>
+  <p>{{myNumber | currency:'CAD':'symbol':'4.2-2':'en'}}</p>
+</div>
+  

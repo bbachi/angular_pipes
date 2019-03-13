@@ -1,0 +1,19 @@
+<div class="form-group">
+  <label for="usr">MyName Pipe Test:</label>
+  <input type="text" [(ngModel)]="name" class="form-control" id="usr">
+</div>
+  
+<div class="">
+  <h1>Result:</h1>
+  <p>{{name | myname}}</p>
+</div>
+
+<div class="">
+  <h1>Result with param upper:</h1>
+  <p>{{name | mynamewithpref:'upper'}}</p>
+</div>
+
+<div class="">
+  <h1>Result with param lower:</h1>
+  <p>{{name | mynamewithpref:'lower'}}</p>
+</div>

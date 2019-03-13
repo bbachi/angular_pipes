@@ -1,0 +1,19 @@
+<div class="form-group">
+  <label for="usr">Printout Pipe Test:</label>
+  <input type="text" #item class="form-control" id="usr">
+  <button type="button" (click)="add(item.value)" class="btn btn-primary">Add</button>
+</div>
+
+<div class="">
+  <h1>Items Length:</h1>
+  <p>{{items.length}}</p>
+</div>
+<div class="">
+  <h1>Result With Pure pipe:</h1>
+  <p>{{items | printout}}</p>
+</div>
+
+<div class="">
+  <h1>Result With ImPure pipe:</h1>
+  <p>{{items | printoutimpure}}</p>
+</div>

@@ -1,0 +1,18 @@
+.mrgtop {
+    margin-top: 25px;
+}
+
+.mrgtop60 {
+    margin-top: 60px;
+}
+
+.bgclor {
+    background-color: green;
+    padding: 3%;
+    color: white;
+}
+.bgclorc {
+    background-color: rebeccapurple;
+    padding: 3%;
+    color: white;
+}
