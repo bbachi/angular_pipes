@@ -1,3 +1,21 @@
-<p>
-  async-pipe works!
-</p>
+<div class="form-group">
+  <label for="usr">Printout Pipe Test:</label>
+  <input type="text" #item class="form-control" id="usr">
+  <div class="row mrgtop">
+    <div class="col-md-2">
+      <button type="button" (click)="addToPromise(item.value)" class="btn btn-warning">Add to promise</button>
+    </div>
+    <div class="col-md-2">
+      <button type="button" (click)="addToObservable(item.value)" class="btn btn-warning">Add to observable</button>
+    </div>
+  </div>
+</div>
+
+<div class="">
+  <h1>Promise Output:</h1>
+  <p>{{namesPromise | async}}</p>
+</div>
+<div class="">
+  <h1>Observable Output:</h1>
+  <p>{{names$ | async}}</p>
+</div>

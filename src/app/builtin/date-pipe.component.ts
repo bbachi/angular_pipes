@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DatePipeComponent implements OnInit {
 
   constructor() { }
-
+  todaysDate = new Date();
   ngOnInit() {
   }
 
